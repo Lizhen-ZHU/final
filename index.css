@@ -1,0 +1,630 @@
+*{padding:0;margin:0;box-sizing: border-box;} ul > li {list-style: none;}
+body {background: #060303;}
+.flex {display: flex;}
+.justify-center {justify-content: center;}
+.justify-end {justify-content: flex-end;}
+.align-center {align-items: center;}
+.relative {position: relative;}
+.absolute {position: absolute;}
+.full-box {left: 0; top: 0; width: 100%; height: 100%;}
+.blur-animate {animation: blur 2s forwards;} 
+@keyframes blur {from {opacity: 0; filter: blur(0)}to {opacity: 1; filter: blur(3px);}}
+.drop-animate {animation: drop 2s forwards;} 
+@keyframes drop {from {opacity: 0; transform: translateY(-20%);}to {opacity: 1; transform: translateY(20%);}}
+.show-animate {animation: show 2s forwards;} 
+@keyframes show {from {opacity: 0;}to {opacity: 1;}}
+.delay-2 {animation-delay: 2s;}
+.blur-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  filter: blur(5px);
+}
+
+
+/* page animation */
+.page-disappear {
+  animation: page-disappear 2s forwards;
+}
+@keyframes page-disappear {
+  from {opacity: 1;}
+  to {opacity: 0;}
+} 
+.page-appear {
+  display: block !important;
+  animation: page-appear 2s forwards;
+}
+@keyframes page-appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+} 
+
+.pianowrapper{  /* paino-page wrap*/
+  background:black;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.keyboard-wrap {
+  text-align: center;
+  position: relative;
+  transform: translateY(40%);
+}
+  
+.bggif {
+  background-image:url('https://res.cloudinary.com/dxzphanl0/image/upload/v1544503867/ezgif-2-7bfa0a83a8bd.gif');
+  background-size:cover;
+  background-position: center; 
+  opacity: 0;
+  filter: blur(3px);
+}
+
+.bggif::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(10,9,9);
+  background: linear-gradient(0deg, rgba(10,9,9,1) 0%, rgba(10,9,9,0.15449929971988796) 100%);
+}
+  .piano{
+    /* position:absolute;
+    top:100px;
+    left:150px; */
+    display: inline;
+  }
+  .white {
+    fill:white;
+    stroke:black;
+    stroke-width:1;
+    cursor:pointer;
+    margin:2px;
+  }
+  .white:hover {
+    fill:#9e9e9e;
+    stroke:lightblue;
+    cursor:pointer;
+    stroke-width:1;
+    outline: black solid 1px;
+  }
+  .black {
+    fill:black;
+    stroke-width:1;
+    cursor:pointer;
+    margin:2px;
+  }
+  .black:hover {
+    fill:#515151;
+    stroke:lightblue;
+    stroke-width:1;
+    outline: black solid 1px;
+  }
+  
+  .keysNumbers {
+    color: lightgray;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: bold;
+    z-index: 100;
+    width: 740px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-flow: row nowrap;
+    transform: translateX(-3%);
+  }
+  /* each key board */
+  .keysNumbers h3 {
+    padding: 0 9px;
+  }
+  
+  /* ------------------------------ */
+  .trailer-page {
+    display: none;
+  }
+  .page {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .full {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .bg {
+    position: absolute;
+    transform: translate3d(0px, 0px, 0px);
+    z-index: 0;
+    background-size: cover;
+    transition: filter .6s;
+  }
+  
+  .bg video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+  }
+  
+  
+  .flex {
+    display:flex;
+  }
+  
+  .flex-center {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-column {
+    flex-direction: column;
+  }
+  
+  .content {
+    position: relative;
+    color: #f4f4f4;
+  }
+  
+  
+  
+  .title-wrapper .title{
+    opacity: 0.6;
+    font-size: 7em;
+  }
+  
+  
+  
+  .title-wrapper .logo{
+    background-image:url(https://www.discoverlosangeles.com/sites/default/files/media/LALA_LAND_logo-white.png);
+    position: absolute;
+    width: 1200px;
+  height:179.2px;
+    opacity:0.6;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .comments {
+    font-size: 1em;
+  transform: translateY(200px); 
+    padding: 30px; 
+    text-align: center;
+    transition: all 1.5s;
+  }
+  
+  .comments.hide {
+    opacity: 0;
+    transform: translateY(170px); 
+  }
+  
+  .comments .comment {
+    font-family: Lato,sans-serif;
+  }
+  
+  .comments .author {
+    color: #5FD4F9;
+    margin-top: 10px;
+    font-wieght: 700;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans',sans-serif;
+  }
+  
+
+  
+  .video-list-control {
+    background: #2C73DE;
+    width: 60px;
+    height: 60px;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 50%;
+    transition: transform .5s;
+    cursor: pointer;
+  }
+  
+  .video-list-control img {
+    width: 50%;
+  }
+  
+  .video-list-control::after {
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid #f4f4f4;
+    opacity: 0;
+    transition: all .5s;
+    z-index:-1;
+  }
+  
+  .video-list-control:hover {
+    transform: scale(0.95);
+  }
+  
+  .video-list-control:hover::after {
+    opacity: .6;
+    transform: scale(0.9)
+  }
+  
+  
+  
+  /* -------------------------------- */
+  .peoplewrap{
+    overflow: hidden;
+     position: relative;
+  }
+  
+  #seb1{
+    margin-top:190px;
+  }
+  .wrap-inner {
+    max-width: 100%;
+    margin: 30px 200px;
+    display: flex;
+    border-radius: 8px;
+    transition: box-shadow .6s;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border: 1px #f1f1f1 solid;
+    box-shadow: 0 16px 24px 0 rgba(0,0,0,.03);
+  }
+  
+  .img-bg {
+      min-width:240px;
+      height:350px;
+      background-size:cover;
+  }
+  
+  .img-bg-shallow {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    opacity: .4;
+    transition: all .5s;
+    will-transform: right;
+  }
+  
+  .wrap-inner:hover .img-bg-shallow {
+    right: 100%;/* 指相对于父辈元素的向左100% */
+    transform: translateX(100%);/* 指相对于图片自己的向右100% */
+    opacity: 1;
+  }
+  .wrap-inner:hover {
+    box-shadow: 0 16px 24px 0 rgba(0,0,0,.08);
+  /*   流行shadow样式 */
+  }
+  
+  
+  
+  .seb{
+    background-image: url(https://posterspy.com/wp-content/uploads/2017/01/Poster-2016-La-La-Land-Seb.jpg);
+  }
+  
+  .mia{
+    background-image: url(https://posterspy.com/wp-content/uploads/2017/01/Poster-2016-La-La-Land-MIA.jpg);
+  }
+  
+  .tx {
+    margin-left: 20px;
+    font-size:1.5em;
+    flex: auto; /*  占据其他父元素剩余所有空间 */
+    padding: 20px 10px;
+    white-space: pre-wrap;
+    font-family: 'Parisienne', cursive;
+  }
+  
+  
+  
+  .text:after{
+    content:" ";
+    position:absolute;
+    height:1.5em;
+    width: 2px;
+    background: #aaa;
+    animation: shin 1.5s infinite alternate;
+  }
+  
+  .text2:after{
+    content:" ";
+    position:absolute;
+    height:1.5em;
+    width: 2px;
+    background: #aaa;
+    animation: shin 1.5s infinite alternate;
+  }
+  
+  @keyframes shin{
+    from{opacity: 1;}
+    to{opacity: 0;}
+  }
+  
+  
+  
+  /* ------------------------------ */
+  
+  .wellcomepage{
+    background-image:url('https://atom-tickets-res.cloudinary.com/image/upload/c_fill,g_north,h_425,q_auto,w_992/v1/ingestion-images-archive-prod/scaled/large_209869cops0.jpg');
+      height: 100vh;
+    overflow: hidden;
+     position: relative;
+  }
+  .layer-content {
+    font-size: 3em;
+    text-align: center;
+    color: #f4f4f4;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  /*    background: rgba(0, 0, 0, 0.3); */
+    height:100vh;
+    overflow:hidden;
+   
+  }
+  
+  .layer-content .bg-bg {
+    position: absolute;
+    background: #9892DE;
+    width: 200px;
+    height: 200px;
+      opacity:0.6;
+    border-radius: 50%;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all .8s;
+    transition-timing-function: cubic-bezier(1, 0.13, 0.19, 0.94);
+    
+  }
+  
+  p:hover + .bg-bg {
+    transform: translate(-50%, -50%) scale(19);
+  
+  }
+  
+  
+  .layer-content p{
+    background-image:url('https://res.cloudinary.com/dxzphanl0/image/upload/v1544419084/white.png');
+    width:500px;
+    height:220px;
+    position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    position: relative;
+    font-family: helvetica;
+    z-index: 3;
+    opacity:0.8;
+    cursor:pointer;
+    animation: zoomin 5s alternate infinite;
+  }
+  
+  @keyframes zoomin {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
+  
+  /* 
+  ---------------------------- */
+  
+  .mappage {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  
+    .mapsvg{
+     display:block;
+      margin: 0 auto;
+      cursor:pointer;
+        transform:scale(0.7);
+    }
+    
+    svg polygon {
+      transition: all 1.5s;
+    }
+    #Theatre:hover {
+      fill:#6B78BD;
+    }
+    
+    #Cafe:hover{
+      fill:#6B78BD;
+    }
+    #Observatory:hover{
+      fill:#6B78BD;
+    }
+    #Dance:hover{
+      fill:#6B78BD;
+    }
+    #Freeway:hover{
+      fill:#6B78BD;
+    }
+    #Theatre.active {
+      fill:#6B78BD;
+    }
+    #Cafe.active{
+      fill:#6B78BD;
+    }
+    #Observatory.active{
+      fill:#6B78BD;
+    }
+    #Dance.active{
+      fill:#6B78BD;
+    }
+    #Freeway.active{
+      fill:#6B78BD;
+    }
+    
+    
+    .videowrapper {
+      position: absolute;
+      top: 0; 
+      display: none; 
+    }
+    
+    .videowrapper.active {
+      display: block;
+      animation: show 2s forwards;
+    }
+    
+    .videowrapper .video {
+      display: none;
+      
+    }
+    
+    .videowrapper .video.active {
+      display: block;
+      position: fixed;
+      min-width: 100%;
+      min-height: 100%;
+  }
+  
+    
+    
+    
+    
+    @keyframes show {
+      from {
+       opacity: 0;
+       height: 100%;
+       width: 100%;
+       transform:scale(0.7);
+      }
+      to {
+       opacity: 1;
+       height: 100%;
+       width: 100%;
+          transform:scale(1.0);
+      }
+    }
+  
+    .close{
+      position:absolute;
+      height:30px;
+      width:30px;
+      background-image:url('https://flaticons.net/icons/Mobile%20Application/Close.png');
+       background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      top:20px;
+      z-index:1;
+      
+    }
+  
+  .la{
+    background-image:url('https://res.cloudinary.com/dxzphanl0/image/upload/v1544385583/1544385479421.png');
+    height:204px;
+    width:328px;
+     position:absolute;
+    top:600px;
+    left:140px;
+     background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    z-index:-2;
+  }
+
+
+
+  /* navigation bar */
+
+  .header-nav {
+    top: 0;
+    right: 0;
+    color: #f4f4f4;
+    width: 100%;
+  }
+
+  .header-nav ul {
+    margin-right: 100px;
+  }
+  .header-nav ul li{
+    padding: 20px 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: Lato,sans-serif;
+  }
+
+  /* SIDE BAR */
+  .page-side-bar {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    background: transparent;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all .8s;
+    overflow-y: auto;
+    color: #f4f4f4;
+  }
+  .page-side-bar.active {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  .page-side-bar .sidebar-close {
+    padding: 20px 15px;
+    color: inherit;
+    margin-left: 10px;
+    margin-top: 20px;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    font-size: 1.3em;
+  }
+
+  /* SIDEBAR Video List */
+  .video-list-wrap {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .video-list-wrap .each-video {
+    width: 100%;
+    margin-bottom: 50px;
+    display: block;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .video-list-wrap .each-video .video-image {
+    width: 100%;
+    height: 180px;
+    background: transparent no-repeat center;
+    background-size: cover;
+  }
+
+  .video-list-wrap .each-video .video-title {
+    text-align: center;
+    margin: 10px;
+    font-size: 1.2em;
+    color: inherit;
+  }

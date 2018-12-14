@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>La La Land</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" rel="stylesheet">
+</head>
+<body>
+  <!-- the global music -->
+  <audio class="global-music" src="https://www.gotinstrumentals.com/uploads/GotInstrumentals/Jerry%20-%20City%20of%20Stars%20(La%20La%20Land%20Soundtrack)%20Karaoke.mp3"></audio>
+  <!-- the global music -->
+
+  <!-- the entry page -->
+  <div class="pianowrapper flex justify-center align-center">
+    <div class='bggif absolute full-box show-animate delay-2'></div>
+    <div class="keyboard-wrap drop-animate">
+      <svg class="piano" height="230" width="1000">
+          <polygon points="200,10 230,10 230,100 245,100 245,220 200,220 200,10" class="white"  id="c" data-key="65"/>
+      
+      
+          <polygon points="245,100 260,100 260,10 275,10 275,100 290,100 290,220 245,220 245,100" class="white" data-key="83" id="d"/>
+      
+      
+          <polygon points="305,10 335,10 335,220 290,220 290,100 305,100 305,10" class="white" data-key="68" id="e"/>
+      
+      
+          <polygon points="335,10 365,10 365,100 380,100 380,220 335,220 335,10" class="white" data-key="70" id="f"/>
+      
+      
+          <polygon points="380,100 395,100 395,10 410,10 410,100 425,100 425,220 380,220 380,100" class="white" data-key="71" id="g"/>
+      
+      
+          <polygon points="425,100 440,100 440,10 455,10 455,100 470,100 470,220 425,220 425,100" class="white" data-key="72" id="a"/>
+      
+          <polygon points="470,100 485,100 485,10 515,10 515,220 470,220 470,100" class="white" data-key="74" id="b"/>
+      
+          <polygon points="515,10 545,10 545,100 560,100 560,220 515,220 515,10" class="white" data-key="82" id="key5"/>
+      
+          <polygon points="560,100 575,100 575,10 590,10 590,100 605,100 605,220 560,220" class="white" data-key="84" id="key5"/>
+      
+          <polygon points="605,100 620,100 620,10 650,10 650,220 605,220 605,100" class="white" data-key="89" id="key5"/>
+      
+          <polygon points="650,10 680,10 680,100 695,100 695,220 650,220 650,10" class="white" data-key="85" id="key5"/>
+      
+          <polygon points="695,100 710,100 710,10 725,10 725,100 740,100 740,220 695,220 695,100" class="white" data-key="73" id="key5"/>
+      
+          <polygon points="740,100 755,100 755,10 770,10 770,100 785,100 785,220 740,220 740,100" class="white" data-key="79" id="key5"/>
+      
+          <polygon points="785,100 800,100 800,10 830,10 830,220 785,220 785,100" class="white" data-key="80" id="key5"/>
+      
+          <polygon points="230,10 260,10 260,100 230,100 230,10" class="black" data-key="49" id="c_sharp"/>
+        <polygon points="275,10 305,10 305,100 275,100 275,10" class="black" data-key="50" id="d_sharp"/>
+        <polygon points="365,10 395,10 395,100 365,100 365,10" class="black" data-key="51" id="f_sharp"/>
+        <polygon points="410,10 440,10 440,100 410,100 410,10" class="black" data-key="52" id="g_sharp"/>
+        <polygon points="455,10 485,10 485,100 455,100 455,10" class="black" data-key="53" id="a_sharp"/>
+        <polygon points="545,10 575,10 575,100 545,100 545,10" class="black" data-key="54" id="key4"/>
+        <polygon points="590,10 620,10 620,100 590,100 590,10" class="black" data-key="55" id="key4"/>
+        <polygon points="680,10 710,10 710,100 680,100 680,10" class="black" data-key="56" id="key4"/>
+        <polygon points="725,10 755,10 755,100 725,100 725,10" class="black" data-key="57" id="key4"/>
+        <polygon points="770,10 800,10 800,100 770,100 770,10" class="black" data-key="48" id="key4"/>
+      </svg>
+      <div id="keysshow" class="keysNumbers">
+          <h3>keys</h3>
+          <h3>A</h3>
+            <h3>S</h3>
+              <h3>D</h3>
+                <h3>F</h3>
+                  <h3>G</h3>
+                    <h3>H</h3>
+                    <h3>J</h3>
+                    <h3>R</h3>
+                    <h3>T</h3>
+                    <h3>Y</h3>
+                    <h3>U</h3>
+                    <h3>I</h3>
+                    <h3>O</h3>
+                    <h3>P</h3>
+      </div>
+    </div>
+    <!-- <div class="keysNotes">
+      <h3>note</h3>
+      <h3>c</h3>
+        <h3>d</h3>
+          <h3>e</h3>
+            <h3>f</h3>
+              <h3>g</h3>
+                <h3>a</h3>
+                <h3>b</h3>
+                <h3>c</h3>
+                <h3>d</h3>
+                <h3>e</h3>
+                <h3>f</h3>
+                <h3>g</h3>
+                <h3>a</h3>
+                <h3>b</h3>
+    </div> -->
+    
+
+    <audio data-key="65" id="c_octave1_audio" src="https://www.sessiontown.com/games/keyboard/piano/c3.mp3"></audio>
+    <audio data-key="83" id="d_octave1_audio" src="https://www.sessiontown.com/games/keyboard/piano/d3.mp3"></audio>
+    <audio data-key="68" id="e_octave1_audio" src="https://www.sessiontown.com/games/keyboard/piano/e3.mp3"></audio>
+    <audio data-key="70" id="f_octave1_audio" src="https://www.sessiontown.com/games/keyboard/piano/f3.mp3"></audio>
+    <audio data-key="71" id="g_octave1_audio" src="https://www.sessiontown.com/games/keyboard/piano/g3.mp3"></audio>
+    <audio data-key="72" id="a_octave1_audio" src="https://www.sessiontown.com/games/keyboard/piano/a3.mp3"></audio>
+    <audio data-key="74" id="b_octave1_audio" src="https://www.sessiontown.com/games/keyboard/piano/as3.mp3"></audio>
+    <audio data-key="82" id="c_octave2_audio" src="https://www.sessiontown.com/games/keyboard/piano/c4.mp3"></audio>
+    <audio data-key="84" id="d_octave2_audio" src="https://www.sessiontown.com/games/keyboard/piano/d4.mp3"></audio>
+    <audio data-key="89" id="e_octave2_audio" src="https://www.sessiontown.com/games/keyboard/piano/e4.mp3"></audio>
+    <audio data-key="85" id="f_octave2_audio" src="https://www.sessiontown.com/games/keyboard/piano/f4.mp3"></audio>
+    <audio data-key="73" id="g_octave2_audio" src="https://www.sessiontown.com/games/keyboard/piano/g4.mp3"></audio>
+    <audio data-key="79" id="a_octave2_audio" src="https://www.sessiontown.com/games/keyboard/piano/a4.mp3"></audio>
+    <audio data-key="80" id="b_octave2_audio" src="https://www.sessiontown.com/games/keyboard/piano/b4.mp3"></audio>
+
+
+
+        <audio data-key="49" id="c_octave1_sharp_audio" src="https://www.sessiontown.com/games/keyboard/piano/d3.mp3"></audio>
+        <audio data-key="50" id="d_octave1_sharp_audio" src="https://www.sessiontown.com/games/keyboard/piano/f3.mp3"></audio>
+        <audio data-key="51" id="f_octave1_sharp_audio" src="https://www.sessiontown.com/games/keyboard/piano/a3.mp3"></audio>
+        <audio data-key="52" id="g_octave1_sharp_audio" src="https://www.sessiontown.com/games/keyboard/piano/c4.mp3"></audio>
+        <audio data-key="53" id="a_octave1_sharp_audio" src="https://www.sessiontown.com/games/keyboard/piano/e4.mp3"></audio>
+        <audio data-key="54" id="c_octave2_sharp_audio" src="https://www.sessiontown.com/games/keyboard/piano/a4.mp3"></audio>
+        <audio data-key="55" id="d_octave2_sharp_audio" src="https://www.sessiontown.com/games/keyboard/piano/g3.mp3"></audio>
+        <audio data-key="56" id="f_octave2_sharp_audio" src="https://www.sessiontown.com/games/keyboard/piano/g3.mp3"></audio>
+        <audio data-key="57" id="g_octave2_sharp_audio" src="https://www.sessiontown.com/games/keyboard/piano/g3.mp3"></audio>
+        <audio data-key="48" id="a_octave2_sharp_audio" src="https://www.sessiontown.com/games/keyboard/piano/g3.mp3"></audio>
+  </div>
+
+
+
+
+<div class="page trailer-page">
+  <div class="bg full">
+    <video src="http://8c0c38c9a3b038bf7694-466351c65fffd8d53fd52c02f34b9efe.r14.cf2.rackcdn.com/clear5.mp4" autoplay loop muted></video>
+  </div>
+  
+  <div class="content full">
+    <div class="title-wrapper relative full flex flex-center flex-column">
+      <div class="logo"></div>
+      <div class="comments">
+          <p class="comment"></p>
+            <p class="author"></p>
+      </div>
+    </div>
+    
+    <div class="absolute video-list-control flex flex-center">
+      <img src="https://res.cloudinary.com/dxzphanl0/image/upload/v1544581509/icon/Video.png" alt=""> 
+    </div>
+  </div>
+  <!-- the navagation bar -->
+  <nav class="header-nav absolute">
+      <ul class="flex justify-end">
+        <li>Cast</li>
+        <li>Stories</li>
+        <li>Map</li>
+        <li>Ending</li>
+      </ul>
+  </nav>
+
+  <aside class="absolute page-side-bar">
+    <div class="sidebar-close"> < Close</div>
+    <ul class="video-list-wrap">
+
+    </ul>
+  </aside>
+</div>
+
+<!-- ------------------------ -->
+
+<!-- <div class="peoplewrap"  >
+  <div class="wrap-inner left" id='seb1'>
+    <div class="img-bg seb" style="opacity: 0;" ></div>
+    <div class="img-bg img-bg-shallow seb" id='pagetwo'></div>
+    <pre class="tx text"></pre>
+  </div>
+  <div class="wrap-inner right">
+    <div class="img-bg mia" style="opacity: 0;"></div>
+    <div class="img-bg img-bg-shallow mia"></div>
+    <pre class="tx text2"></pre>
+  </div>
+</div> -->
+
+
+<!-- ----------------------------- -->
+<!-- <div class='wellcomepage'>
+   <div class="layer-content">
+        <p class='explore'></p>
+    <div class="bg-bg"></div>
+</div>
+</div> -->
+  
+  
+<!-- ----------------------------- -->
+<!--   
+ <div class="mappage">
+   
+  <svg class='mapsvg' width="613px" height="949px" viewBox="0 0 613 949" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Page-1" stroke="none" stroke-width="1" fill="#A09FCC" fill-rule="evenodd">
+          <polygon id="Path" stroke="#9EA7D4" points="164.476435 1.15388145 302.744009 1.15388145 323.6557 27.8242136 323.6557 57.4461 353.676879 72.8880859 445.522183 72.8880859 456.481659 61.6316487 475.643687 61.6316487 475.643687 83.6228344 486.312221 83.6228344 486.312221 75.9138805 520.234027 75.9138805 520.234027 105.896936 503.574098 105.896936 503.574098 125.693016 489.647016 125.693016 489.647016 170.640512 387.759204 170.640512 382.078816 187.814103 358.817519 187.814103 358.817519 228.437602 376.577007 255.180168 361.807197 273.944909 368.910189 284.745872 382.078816 284.745872 439.554867 245.695465 489.647016 309.417735 516.341426 309.417735 536.984247 273.944909 548.52962 278.762504 583.727556 278.762504 583.727556 298.612759 605.397702 309.417735 595.868857 325.160695 595.868857 347.021459 611.792402 347.021459 611.792402 394.354677 569.553675 413.444471 569.553675 470.551327 509.402966 470.551327 509.402966 515.300179 480.659925 515.300179 480.659925 564.649925 489.647016 564.649925 489.647016 577.730266 498.284977 577.730266 498.284977 564.649925 520.234027 564.649925 520.234027 606.627808 495.728703 606.627808 495.728703 612.520884 466.945531 612.520884 466.945531 741.245567 439.554867 741.245567 439.554867 777.637368 466.945531 777.637368 466.945531 789.971293 516.341426 789.971293 513.490197 766.97686 531.731243 766.97686 531.731243 818.664172 489.647016 864.334006 460.773552 864.334006 460.773552 920.333276 445.522183 947.900512 427.218936 947.900512 387.759204 926.535352 395.470164 899.545987 407.192108 899.545987 407.192108 860.967107 420.374781 860.967107 420.374781 843.538691 429.779223 843.538691 429.779223 822.175538 420.374781 811.719693 420.374781 695.509519 435.824793 695.509519 435.824793 636.275779 439.554867 636.275779 442.390045 609.655609 452.749579 609.655609 452.749579 573.251769 435.824793 573.251769 435.824793 599.883978 420.374781 599.883978 413.223633 588.001514 413.223633 553.116591 391.541447 550.455979 391.541447 526.315837 358.817519 523.388361 358.817519 515.300179 365.141992 515.300179 365.141992 505.384081 388.134419 505.384081 391.541447 490.704563 400.911779 490.704563 400.911779 474.527197 388.134419 474.527197 388.134419 458.919675 382.078816 458.919675 373.5472 474.527197 329.19162 474.527197 302.744009 445.349749 289.178096 445.349749 289.178096 458.919675 306.791109 474.527197 306.791109 490.704563 282.165396 490.704563 282.165396 501.73226 294.417054 501.73226 294.417054 512.481054 282.165396 523.388361 242.878222 523.388361 242.878222 540.445575 256.173259 553.116591 271.452718 553.116591 294.417054 534.020778 306.791109 534.020778 306.791109 523.388361 325.844786 523.388361 325.844786 534.020778 353.676879 540.445575 353.676879 595.913124 289.178096 595.913124 289.178096 616.959251 271.452718 616.959251 210.092093 523.388361 210.092093 495.897372 242.878222 474.527197 242.878222 458.919675 223.009908 427.993567 208.053494 427.993567 208.053494 416.620753 197.870532 416.620753 159.77923 450.205467 146.943681 439.374407 103.962551 439.374407 103.962551 391.818467 68.3271987 366.69113 103.962551 298.612759 62.6287528 264.89361 31.6986316 264.89361 14.4347482 223 0.505659574 223 0.505659574 197.722175 14.4347482 197.722175 14.4347482 176.477406 2.8873692 176.477406 2.8873692 149.490047 25.87177 125.693016 25.87177 95.362837 56.0855724 95.362837 83.9417432 65.8613403 143.608886 65.8613403 143.608886 19.1360901"></polygon>
+          <polygon id="Freeway" stroke="#979797" points="143.983937 67.9455563 143.983937 202.78463 357.042001 202.78463 358.624787 202.78463 358.624787 187.622985 381.797132 187.622985 387.802788 170.329043 489.424305 170.329043 489.424305 125.41224 503.299197 125.41224 503.299197 105.612504 520.23227 105.612504 520.23227 76.1349797 486.7023 76.1349797 486.7023 82.9389741 475.835672 82.9389741 475.835672 62.1154301 456.621697 62.1154301 445.494278 72.9840956 353.94342 72.9840956 323.599988 57.0748305 323.599988 27.8864054 302.583529 1.15388145 164.465405 1.15388145 143.983937 19.6008825"></polygon>
+          <polygon id="Dance" stroke="#979797" points="143.983937 66.5562924 143.983937 241.695197 200.500255 280.904978 180.621162 339.252446 104.336378 392.579537 68.3478928 366.925805 104.336378 298.45739 62.6859181 264.8707 31.7594671 264.8707 14.5996764 223 0.505659574 223 0.505659574 197.55464 14.5996764 197.55464 14.5996764 176.629036 2.86873854 176.629036 2.86873854 149.320261 26.1466118 125.44282 26.1466118 95.0839699 55.9557934 95.0839699 84.1346819 65.5546903"></polygon>
+          <polygon id="Observatory" stroke="#979797" points="382.234844 284.936494 382.234844 403.558277 446.010194 403.558277 446.010194 472.045543 401.921225 472.045543 400.359056 474.370448 388.454155 474.370448 388.454155 459.259357 382.234844 459.259357 373.550912 474.370448 329.55213 474.370448 302.751448 445.395355 289.399071 445.395355 289.399071 459.259357 306.639806 474.370448 306.639806 490.630566 282.310918 490.630566 282.310918 501.49516 294.478027 501.49516 294.478027 512.625161 282.310918 523.339465 243.326072 523.339465 243.326072 540.170488 256.375021 553.349953 271.625118 553.349953 294.478027 533.369364 306.639806 533.369364 306.639806 523.339465 325.659039 523.339465 325.659039 533.369364 353.881094 540.170488 353.881094 595.919948 289.399071 595.919948 289.399071 617.322015 271.625118 617.322015 210.061024 523.339465 210.061024 496.52301 243.326072 474.370448 243.326072 459.259357 223.07515 428.195521 208.261151 428.195521 208.261151 416.429766 198.582672 416.429766 159.854329 449.612014 147.081 439.697177 104.009438 439.697177 104.009438 392.579537 180.456329 339.382547 200.500255 281.387129 143.983937 241.369054 143.983937 202.78463 358.95187 202.78463 358.95187 226.606686 377.56877 254.693395 362.509502 274.079654 369.944903 284.936494"></polygon>
+          <polygon id="Theatre" stroke="#979797" points="446.010194 473.697896 482.577535 515.140308 509.361674 515.140308 509.361674 470.284417 569.185212 470.284417 569.185212 414.010817 611.792402 394.592365 611.792402 347.361205 595.963622 347.361205 595.963622 325.36014 605.098847 309.378095 583.701155 298.681702 583.701155 279.018097 548.961792 279.018097 537.151856 273.972813 516.796578 309.378095 489.977108 309.378095 439.951052 245.719718 382.328864 284.804107 382.328864 403.370717 446.010194 403.370717"></polygon>
+          <polygon id="Cafe" stroke="#979797" points="400.952863 474.386657 402.629714 471.942519 446.010194 471.942519 482.113727 515.140308 480.383304 515.140308 480.383304 564.534505 489.660266 564.534505 489.660266 577.478328 498.083911 577.478328 498.083911 564.534505 520.23227 564.534505 520.23227 606.622013 495.755693 606.622013 495.755693 612.754459 467.127902 612.754459 467.127902 741.30582 439.531111 741.30582 439.531111 777.868142 467.127902 777.868142 467.127902 789.99126 516.352076 789.99126 513.605629 767.317123 531.482345 767.317123 531.482345 818.776576 489.660266 864.56907 461.197089 864.56907 461.197089 920.557365 446.010194 947.900512 427.456038 947.900512 387.511657 926.578755 395.741546 899.486044 406.982524 899.486044 406.982524 860.799499 420.143731 860.799499 420.143731 843.496174 429.673201 843.496174 429.673201 822.38626 420.143731 811.845479 420.143731 695.689754 435.518951 695.689754 435.518951 636.507641 439.531111 636.507641 442.587094 609.811105 452.882923 609.811105 452.882923 573.107799 435.518951 573.107799 435.518951 599.760228 420.143731 599.760228 413.169316 588.046675 413.169316 553.872431 391.645111 550.4376 391.645111 526.392209 359.050054 523.566212 359.050054 515.140308 364.935973 515.140308 364.935973 505.307498 387.511657 505.307498 391.645111 490.580493 400.952863 490.580493"></polygon>
+      </g>
+  </svg>
+
+
+
+
+
+  <div class="videowrapper">
+    
+        <video class='video video1' id="v1" src="" autoplay loop></video> 
+         <video class='video video2' id="v2" src="" autoplay loop></video> 
+         <video class='video video3' id="v3" src="" autoplay loop></video>
+         <video class='video video4' id="v4" src="" autoplay loop></video>
+        <video class='video video5' id="v5" src="" autoplay loop></video> 
+  </div>
+         
+  <div class="close"></div>
+        
+  <div class="la"></div> -->
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/zoom.js/0.0.1/zoom.js'></script>
+  <script src="./index.js"></script>
+   
+</body>
+</html>
